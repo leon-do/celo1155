@@ -1,6 +1,6 @@
 const ContractKit = require("@celo/contractkit");
 
-async function balanceOf(account, id) {
+async function balanceOf(contractAddress, account, id) {
   const kit = ContractKit.newKit(process.env.CELO_NETWORK);
   const abi = [
     {
@@ -14,7 +14,7 @@ async function balanceOf(account, id) {
       type: "function",
     },
   ];
-  const contract = new kit.web3.eth.Contract(abi, process.env.CELO_CONTRACT);
+  const contract = new kit.web3.eth.Contract(abi, contractAddress);
 
   const balance = await contract.methods.balanceOf(account, id).call();
   return balance;

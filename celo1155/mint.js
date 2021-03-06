@@ -1,6 +1,6 @@
 const ContractKit = require('@celo/contractkit')
 
-async function mint(id, supply, uri) {
+async function mint(contractAddress, id, supply, uri) {
   const kit = ContractKit.newKit(process.env.CELO_NETWORK);
   kit.connection.addAccount(process.env.CELO_PRIVATE_KEY);
 
@@ -30,7 +30,7 @@ async function mint(id, supply, uri) {
       type: "function",
     },
   ];
-  const contract = new kit.web3.eth.Contract(abi, process.env.CELO_CONTRACT);
+  const contract = new kit.web3.eth.Contract(abi, contractAddress);
 
   const from = (await kit.web3.eth.getAccounts())[0];
   const data = uri || "0x0000000000000000000000000000000000000000000000000000000000000000";
