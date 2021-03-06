@@ -3,8 +3,8 @@
     "@celo/contractkit": "^1.0.2",
     "dotenv": "^8.2.0"
   },
-  "name": "celo-1155",
-  "description": "CELO-1155",
+  "name": "celo1155",
+  "description": "ERC1155 tokens on Celo",
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
@@ -14,6 +14,6 @@
     "test": "mocha"
   },
   "keywords": ["erc1155", "erc-1155", "token", "nft", "celo"],
-  "author": "leon-do <leondo123@gmail.com> (leondo.eth.link)",
-  "license": "ISC"
+  "author": "Leon Do <leondo123@gmail.com> (leondo.eth.link)",
+  "license": "MIT"
 }

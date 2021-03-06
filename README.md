@@ -1,4 +1,4 @@
-# CELO-1155: ERC1155 tokens on Celo
+# CELO1155: ERC1155 tokens on Celo
 
 ### Create .env file
 
