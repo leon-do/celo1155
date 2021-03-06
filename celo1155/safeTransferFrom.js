@@ -1,10 +1,7 @@
-import dotenv from "dotenv";
-dotenv.config();
-import { newKit } from "@celo/contractkit";
+const ContractKit = require('@celo/contractkit')
 
-start();
-async function start() {
-  const kit = newKit(process.env.CELO_NETWORK);
+async function safeTransferFrom(to, amount, id, data) {
+  const kit = ContractKit.newKit(process.env.CELO_NETWORK);
   kit.connection.addAccount(process.env.CELO_PRIVATE_KEY);
 
   const abi = [
@@ -45,11 +42,10 @@ async function start() {
   const contract = new kit.web3.eth.Contract(abi, process.env.CELO_CONTRACT);
 
   const from = (await kit.web3.eth.getAccounts())[0];
-  const to = "0x869e4b4556ce2454625436Ed12431e4E70942FA9";
-  const amount = 1;
-  const id = 1;
-  const data = "0x0";
+  const datas = data || "0x0";
 
-  const tx = await contract.methods.safeTransferFrom(from, to, amount, id, data).send({ from });
+  const tx = await contract.methods.safeTransferFrom(from, to, amount, id, datas).send({ from });
   console.log(tx);
 }
+
+module.exports = safeTransferFrom;

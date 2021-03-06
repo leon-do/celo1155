@@ -1,10 +1,21 @@
-https://gitcoin.co/hackathon/mobile-celo/onboard?registration=mobile-celo
+# CELO 1155
 
-https://docs.celo.org/developer-guide/contractkit/setup
+## ERC1155 implementation for Celo Blockchain
 
-Contract: 0xe6b31628b1e008595F9152ec25B9EC3807864d2E
+### Setup
 
-````solidity
+`create .env`
+
+```
+CELO_NETWORK=https://alfajores-forno.celo-testnet.org
+CELO_CONTRACT=0xe6b31628b1e008595F9152ec25B9EC3807864d2E
+CELO_PRIVATE_KEY=PRIVAETE_KEY_HERE_23323rfasdf
+```
+
+
+### Solidity Contract
+
+```solidity
 // SPDX-Licence-Identifier: MIT
 pragma solidity ^0.8.0;
 
@@ -22,7 +33,9 @@ contract Celo1155 is ERC1155 {
         _mint(msg.sender, id, supply, uri);
     }
 }
-``
+```
+
+### ABI
 
 ```json
 [
@@ -387,4 +400,3 @@ contract Celo1155 is ERC1155 {
 	}
 ]
 ```
-````

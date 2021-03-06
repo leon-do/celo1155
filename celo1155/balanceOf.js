@@ -1,10 +1,7 @@
-import dotenv from "dotenv";
-dotenv.config();
-import { newKit } from "@celo/contractkit";
+const ContractKit = require("@celo/contractkit");
 
-start();
-async function start() {
-  const kit = newKit(process.env.CELO_NETWORK);
+async function balanceOf(account, id) {
+  const kit = ContractKit.newKit(process.env.CELO_NETWORK);
   const abi = [
     {
       inputs: [
@@ -19,9 +16,8 @@ async function start() {
   ];
   const contract = new kit.web3.eth.Contract(abi, process.env.CELO_CONTRACT);
 
-  const account = "0x4219f37376A1656303b985D78761C29EEc72caDa";
-  const id = 1;
-
   const balance = await contract.methods.balanceOf(account, id).call();
-  console.log(balance);
+  return balance;
 }
+
+module.exports = balanceOf;
