@@ -1,7 +1,6 @@
 {
   "dependencies": {
-    "@celo/contractkit": "^1.0.2",
-    "dotenv": "^8.2.0"
+    "@celo/contractkit": "^1.0.2"
   },
   "name": "celo1155",
   "description": "ERC1155 tokens on Celo",

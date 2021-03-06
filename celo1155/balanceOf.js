@@ -1,7 +1,7 @@
 const ContractKit = require("@celo/contractkit");
 
 async function balanceOf(contractAddress, account, id) {
-  const kit = ContractKit.newKit(process.env.CELO_NETWORK);
+  const kit = ContractKit.newKit(this.network);
   const abi = [
     {
       inputs: [

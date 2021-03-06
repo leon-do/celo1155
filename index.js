@@ -1,1 +1,1 @@
-exports.celo1155 = require("./celo1155");
+module.exports = require("./celo1155");

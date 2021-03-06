@@ -1,8 +1,8 @@
 const ContractKit = require('@celo/contractkit')
 
 async function mint(contractAddress, id, supply, uri) {
-  const kit = ContractKit.newKit(process.env.CELO_NETWORK);
-  kit.connection.addAccount(process.env.CELO_PRIVATE_KEY);
+  const kit = ContractKit.newKit(this.network);
+  kit.connection.addAccount(this.privateKey);
 
   // https://docs.celo.org/developer-guide/contractkit/usage#interacting-with-custom-contracts
   const abi = [
