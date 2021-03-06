@@ -1,8 +1,8 @@
 const ContractKit = require("@celo/contractkit");
 
-async function safeTransferFrom(contractAddress, to, amount, id, data) {
-  const kit = ContractKit.newKit(process.env.CELO_NETWORK);
-  kit.connection.addAccount(process.env.CELO_PRIVATE_KEY);
+async function safeTransferFrom(contractAddress, to, id, amount, data) {
+  const kit = ContractKit.newKit(this.network);
+  kit.connection.addAccount(this.privateKey)
 
   const abi = [
     {
