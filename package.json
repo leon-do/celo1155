@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "@celo/contractkit": "^1.0.2",
+    "dotenv": "^8.2.0"
+  },
+  "name": "celo-1155",
+  "description": "CELO-1155",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "mocha": "^6.2.3"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
