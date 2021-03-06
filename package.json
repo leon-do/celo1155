@@ -13,7 +13,7 @@
   "scripts": {
     "test": "mocha"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["erc1155", "erc-1155", "token", "nft", "celo"],
+  "author": "leon-do <leondo123@gmail.com> (leondo.eth.link)",
   "license": "ISC"
 }
