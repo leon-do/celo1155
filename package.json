@@ -4,7 +4,7 @@
   },
   "name": "celo1155",
   "description": "ERC1155 tokens on Celo",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "index.js",
   "devDependencies": {
     "mocha": "^6.2.3"

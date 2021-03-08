@@ -1,3 +1,3 @@
-module.exports = function network(abi) {
+module.exports = function abi(abi) {
   this.abi = abi;
 }
