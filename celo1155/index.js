@@ -8,4 +8,4 @@ const privateKey = require("./privateKey");
 const cid = require("./cid");
 const abi = require("./abi");
 
-module.exports = { balanceOf, deploy, mint, safeTransferFrom, network, privateKey, cid, creators };
+module.exports = { balanceOf, deploy, mint, safeTransferFrom, network, privateKey, cid, creators, abi };
