@@ -1,10 +1,10 @@
 {
   "dependencies": {
-    "@celo/contractkit": "^1.0.3"
+    "@celo/contractkit": "^1.0.2"
   },
   "name": "celo1155",
   "description": "ERC1155 tokens on Celo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "index.js",
   "devDependencies": {
     "mocha": "^6.2.3"
