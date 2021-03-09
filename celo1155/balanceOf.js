@@ -2,7 +2,7 @@ const ContractKit = require("@celo/contractkit");
 
 async function balanceOf(contractAddress, account, id) {
   const kit = ContractKit.newKit(this.network);
-  const abi = [
+  const abi = this.abi || [
     {
       inputs: [
         { internalType: "address", name: "account", type: "address" },

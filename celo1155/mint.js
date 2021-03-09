@@ -5,7 +5,7 @@ async function mint(contractAddress, supply, cid) {
   kit.connection.addAccount(this.privateKey);
 
   // https://docs.celo.org/developer-guide/contractkit/usage#interacting-with-custom-contracts
-  const abi = [
+  const abi = this.abi || [
     {
       inputs: [
         {

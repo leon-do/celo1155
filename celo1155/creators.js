@@ -4,7 +4,7 @@ async function creators(contractAddress, id) {
   const kit = ContractKit.newKit(this.network);
 
   // https://docs.celo.org/developer-guide/contractkit/usage#interacting-with-custom-contracts
-  const abi = [
+  const abi = this.abi || [
     {
       inputs: [
         {

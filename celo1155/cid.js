@@ -3,7 +3,7 @@ const ContractKit = require("@celo/contractkit");
 async function cid(contractAddress, id) {
   const kit = ContractKit.newKit(this.network);
 
-  const abi = [
+  const abi = this.abi || [
     {
       inputs: [
         {
@@ -26,7 +26,7 @@ async function cid(contractAddress, id) {
   ];
   const contract = new kit.web3.eth.Contract(abi, contractAddress);
 
-  const cid = await contract.methods.cid(id).call()
+  const cid = await contract.methods.cid(id).call();
   return cid;
 }
 
